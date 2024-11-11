@@ -150,9 +150,7 @@ const CourseIdPage = async ({
                                 initialData={course}
                                 courseId={course.id}
                             />
-                            <div>
-                                TODO:chapters
-                            </div>
+                           
                         </div>
                         <div>
                             <div className="flex items-center gap-x-2">

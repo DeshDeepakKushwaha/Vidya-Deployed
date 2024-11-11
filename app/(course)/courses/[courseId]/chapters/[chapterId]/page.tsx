@@ -9,6 +9,7 @@ import { VideoPlayer } from "./_components/video-player";
 import { Banner } from "@/components/ui/banner";
 import { CourseEnrollButton } from "./_components/course-enroll-button";
 import { Separator } from "@radix-ui/react-dropdown-menu";
+import { CourseProgressButton } from "./_components/course-progress-button";
 // import { CourseProgressButton } from "./_components/course-progress-button";
 
 const ChapterIdPage = async ({
@@ -76,8 +77,12 @@ const newParams=await params;
               {chapter.title}
             </h2>
             {purchase ? (
-              <div>
-                </div>
+              <CourseProgressButton
+              chapterId={params.chapterId}
+              courseId={params.courseId}
+              nextChapterId={nextChapter?.id}
+              isCompleted={!!userProgress?.isCompleted}
+            />
               //todo
             ) : (
               <CourseEnrollButton
