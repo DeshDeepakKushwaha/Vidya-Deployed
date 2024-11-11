@@ -98,7 +98,7 @@ export async function PATCH(
 ) {
     try{
         const { userId } = await auth();
-        const { isPublished, ...values } = await req.json();
+        const { ...values } = await req.json();
         const newparams = await params;
 
         if(!userId){
@@ -128,12 +128,7 @@ export async function PATCH(
 
         if(values.videoUrl)
         {
-            const existingMuxData=await db.muxData.findFirst({
-                where:{
-                    chapterId:newparams.chapterId,
-                }
-            })
-
+          
             const asset = await video.assets.create({
                 input: values.videoUrl,
                 playback_policy: ['public'],

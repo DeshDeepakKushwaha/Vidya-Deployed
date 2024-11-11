@@ -1,7 +1,6 @@
 import React from "react";
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { Chart } from "./_components/chart";
 import { getPublishedCoursesTitles } from "@/actions/get-courses"; // Import getCoursesTitles function
 import { getCutAnalytics } from "@/actions/get-teacher-analytics-cuttoff"; // Import getAnalytics function
 import { currentUser } from '@clerk/nextjs/server';

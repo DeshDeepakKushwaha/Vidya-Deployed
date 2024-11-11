@@ -1,6 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
-import { File } from "lucide-react";
 
 import { getChapter } from "@/actions/get-chapter";
 import { Preview } from "@/components/preview";
@@ -10,7 +9,6 @@ import { Banner } from "@/components/ui/banner";
 import { CourseEnrollButton } from "./_components/course-enroll-button";
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import { CourseProgressButton } from "./_components/course-progress-button";
-// import { CourseProgressButton } from "./_components/course-progress-button";
 
 const ChapterIdPage = async ({
   params
@@ -27,7 +25,6 @@ const newParams=await params;
     chapter,
     course,
     muxData,
-    attachments,
     nextChapter,
     userProgress,
     purchase,

@@ -44,7 +44,7 @@ export async function POST(req: Request) {
 }
 
 // Dummy GET function
-export async function GET(req: Request) {
+export async function GET() {
   // Dummy function for GET, you can leave it empty or handle it as needed
   return new NextResponse(null, { status: 200 });
 }

@@ -38,7 +38,7 @@ export const ChaptersList = ({
     const onDragEnd = (result: DropResult) => {
         if(!result.destination) return;
 
-        const item = Array.from(chapters);
+       
         const [reorderedItem] = items.splice(result.source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
 
